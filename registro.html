@@ -45,9 +45,9 @@
 
 <!-- INPUT PASSWORD                     -->
                     <div class="input-container">
-                        <input name="password" id="password" class="input" type="password" placeholder="Contraseña" required minlength="6" maxlength="12">
+                        <input name="password" id="password" class="input" type="password" placeholder="Contraseña" required pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="(mínimo 8 caracteres, al menos una mayúscula, una minúscula, un número y un símbolo)">
                         <label class="input-label" for="password">Contraseña</label>
-                        <span class="input-message-error">Este campo no es valido</span>
+                        <span class="input-message-error">Formato de contraseña inválido</span>
                     </div>
 
                 </fieldset>
@@ -57,7 +57,7 @@
 <!-- INPUT FECHA NACIMIENTO                     -->
                     <legend class="form__label">Información personal</legend>
                     <div class="input-container">
-                        <input name="birth" id="birth" class="input" type="text" placeholder="Fecha de nacimento">
+                        <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimento" required>
                         <label class="input-label" for="birth">Fecha de nacimiento</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -98,11 +98,12 @@
                 </fieldset>
 
 <!-- BOTON -->
-                <button class="button">Registrar</a>
+                <button type="submit" class="button">Registrar</a>
 
             </form>
 
         </section>
     </main>
+    <script src="./js/validaciones.js"></script>
 </body>
 </html>
