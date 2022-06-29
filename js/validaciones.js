@@ -9,6 +9,7 @@ function validarNacimiento(input) {
   if(!mayorDeEdad(fechaCliente)) {
     mensaje = "Debes tener al menos 18 años";
   }
+  input,setCustomValidity(mensaje);
 };
 
 function mayorDeEdad(fechaCliente) { 
